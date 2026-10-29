@@ -2690,6 +2690,22 @@
       });
     }
 
+    
+    let currentPhotoIndex = 0;
+    const PHOTO_VARIANTS = [
+      { src: './karunesh_studio.jpg', label: 'STUDIO NAVY' },
+      { src: './karunesh_photo.jpg', label: 'CLASSIC FORMAL' }
+    ];
+
+    function togglePhotoStyle() {
+      currentPhotoIndex = (currentPhotoIndex + 1) % PHOTO_VARIANTS.length;
+      const photo = document.getElementById('mainProfilePhoto');
+      const label = document.getElementById('photoBadgeLabel');
+      if (photo) photo.src = PHOTO_VARIANTS[currentPhotoIndex].src;
+      if (label) label.innerText = PHOTO_VARIANTS[currentPhotoIndex].label;
+      showToast('Photo Style: ' + PHOTO_VARIANTS[currentPhotoIndex].label);
+    }
+
     function showToast(msg) {
       const toast = document.getElementById('toast');
       document.getElementById('toastMsg').innerText = msg;
