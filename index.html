@@ -197,11 +197,52 @@
 
       <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 pb-6 border-b border-blue-900/40">
         <!-- Photo -->
-        <div class="relative shrink-0">
-          <img src="./karunesh_photo.jpg" alt="Karunesh P" class="w-32 h-36 sm:w-36 sm:h-44 rounded-2xl object-cover object-top border-2 border-blue-500/60 shadow-2xl ring-4 ring-blue-500/10">
-          <span class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono font-bold">
-            AVAILABLE
-          </span>
+        <div class="relative group shrink-0">
+          <!-- Multi-Spectrum Ambient Glow -->
+          <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 opacity-40 blur-xl group-hover:opacity-70 transition duration-500"></div>
+
+          <!-- Glass Identity Card Container -->
+          <div class="relative rounded-2xl bg-corporate-950/95 border border-blue-500/50 p-3 shadow-2xl backdrop-blur-md overflow-hidden">
+            
+            <!-- Metallic Security Micro-Header -->
+            <div class="flex items-center justify-between px-1.5 py-1 mb-2 border-b border-blue-900/60 text-[10px] font-mono text-slate-300">
+              <span class="flex items-center gap-1.5 text-blue-400 font-bold tracking-wider">
+                <svg class="w-3.5 h-3.5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                VERIFIED STUDENT ID
+              </span>
+              <span class="text-blue-300 font-mono text-[9px] bg-blue-950/80 px-2 py-0.5 rounded border border-blue-700/60 font-semibold">KPRIET #2029</span>
+            </div>
+
+            <!-- Portrait Frame -->
+            <div class="relative w-36 h-44 sm:w-44 sm:h-52 rounded-xl overflow-hidden cursor-pointer group/img border border-blue-400/20" onclick="openPhotoModal()" title="Click to view full portrait credential">
+              <img id="mainProfilePhoto" src="./karunesh_photo.jpg" alt="Karunesh P" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover/img:scale-105">
+              
+              <!-- Subtle Holographic Corner Accent -->
+              <div class="absolute top-0 right-0 w-10 h-10 bg-gradient-to-bl from-blue-400/30 to-transparent pointer-events-none"></div>
+
+              <!-- Specular Light Reflection Sweep on Hover -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover/img:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+
+              <!-- Bottom Overlay Ribbon -->
+              <div class="absolute bottom-0 inset-x-0 p-1.5 bg-gradient-to-t from-black/90 via-black/60 to-transparent flex items-center justify-between text-[10px] font-mono">
+                <span class="text-white font-semibold text-[10px] tracking-wider">KARUNESH P</span>
+                <span class="text-[9px] text-blue-300 bg-blue-900/70 px-1.5 py-0.5 rounded border border-blue-600/50">Expand &nearr;</span>
+              </div>
+            </div>
+
+            <!-- Live Availability Beacon -->
+            <div class="mt-2.5 px-1 flex items-center justify-between text-[10px] font-mono">
+              <div class="flex items-center gap-1.5">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span class="text-emerald-300 font-bold tracking-wider">OPEN TO SWE</span>
+              </div>
+              <span class="text-blue-300 font-semibold">AI &bull; DEV</span>
+            </div>
+
+          </div>
         </div>
 
         <!-- Info -->
@@ -238,6 +279,24 @@
           </div>
         </div>
       </div>
+
+          <!-- Audio Elevator Pitch & Action Bar -->
+          <div class="pt-2 flex flex-wrap items-center gap-2.5">
+            <button id="audioIntroBtn" onclick="toggleAudioIntro()" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-mono text-xs font-semibold shadow-md flex items-center gap-2 transition-all transform active:scale-95">
+              <svg id="audioIconPlay" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg id="audioIconStop" class="w-3.5 h-3.5 hidden animate-pulse text-amber-300" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></svg>
+              <span id="audioBtnText">Play Audio Bio</span>
+            </button>
+            <a href="https://github.com/karuneshp24" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-corporate-950 hover:bg-corporate-900 text-slate-200 border border-blue-900/60 font-mono text-xs font-semibold flex items-center gap-1.5 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub @karuneshp24
+            </a>
+            <button onclick="window.print()" class="px-3 py-1.5 rounded-xl bg-corporate-950 hover:bg-corporate-900 text-slate-200 border border-blue-900/60 font-mono text-xs font-semibold flex items-center gap-1.5 transition-colors" title="Print or save as PDF">
+              <svg class="w-3.5 h-3.5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              Export PDF
+            </button>
+          </div>
+
 
       <!-- Quick Metrics Counter -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 font-mono text-center">
@@ -343,6 +402,100 @@
       </div>
 
     </div>
+
+    
+    <!-- INTERACTIVE DEVELOPER CONSOLE & ACADEMIC COHORT SHOWCASE -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- DEVELOPER LIVE TERMINAL (7 Cols) -->
+      <div class="lg:col-span-7 rounded-3xl p-5 sm:p-6 formal-card flex flex-col justify-between font-mono text-xs space-y-4">
+        <!-- Terminal Header -->
+        <div class="flex items-center justify-between pb-3 border-b border-blue-900/50">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            <span class="ml-2 text-slate-400 text-[11px]">karunesh@kpriet-ai: ~/portfolio</span>
+          </div>
+          <span class="text-emerald-400 text-[10px] font-semibold">BASH &bull; ACTIVE</span>
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="space-y-3 font-mono leading-relaxed text-slate-300">
+          <div>
+            <span class="text-blue-400 font-bold">$ whoami</span>
+            <div class="text-slate-100 font-semibold pl-3 mt-0.5">&gt; Karunesh P &mdash; Student Aiming for Software Engineering & AI</div>
+          </div>
+
+          <div>
+            <span class="text-blue-400 font-bold">$ cat tech_stack.json</span>
+            <div class="pl-3 mt-0.5 text-[11px] text-blue-200 bg-corporate-950/70 p-2.5 rounded-xl border border-blue-900/40 font-mono">
+              {<br>
+              &nbsp;&nbsp;<span class="text-emerald-400">"languages"</span>: [<span class="text-amber-300">"Python (DSA, NumPy, PyTorch)"</span>, <span class="text-amber-300">"C"</span>, <span class="text-amber-300">"MATLAB"</span>],<br>
+              &nbsp;&nbsp;<span class="text-emerald-400">"domains"</span>: [<span class="text-amber-300">"Artificial Intelligence"</span>, <span class="text-amber-300">"Computer Vision"</span>, <span class="text-amber-300">"Cloud (AWS)"</span>],<br>
+              &nbsp;&nbsp;<span class="text-emerald-400">"recent_achievement"</span>: <span class="text-amber-300">"2nd Prize Winner @ Karpagam National Hackathon"</span>,<br>
+              &nbsp;&nbsp;<span class="text-emerald-400">"verified_credentials"</span>: 70<br>
+              }
+            </div>
+          </div>
+
+          <div>
+            <span class="text-blue-400 font-bold">$ run diagnostics.sh</span>
+            <div class="pl-3 mt-0.5 text-[11px] space-y-1">
+              <div class="text-emerald-400 flex items-center gap-1.5">&#10003; Cryptographic Integrity Check: 70/70 Pass (SHA-256)</div>
+              <div class="text-emerald-400 flex items-center gap-1.5">&#10003; MathWorks & AWS Verification: Online Ledger Confirmed</div>
+              <div class="text-blue-300 flex items-center gap-1.5">&#10140; Status: Actively exploring summer software engineering internships</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Interactive Input -->
+        <div class="pt-2 border-t border-blue-900/50 flex items-center gap-2 text-slate-400 text-xs">
+          <span class="text-emerald-400 font-bold">&gt;</span>
+          <span class="text-slate-300">Type command or click quick action:</span>
+          <button onclick="runTerminalCmd('hackathon')" class="px-2 py-0.5 rounded bg-blue-950 border border-blue-800 text-blue-300 hover:text-white transition-colors text-[10px]">hackathon</button>
+          <button onclick="runTerminalCmd('certs')" class="px-2 py-0.5 rounded bg-blue-950 border border-blue-800 text-blue-300 hover:text-white transition-colors text-[10px]">certs</button>
+        </div>
+      </div>
+
+      <!-- ACADEMIC COHORT & TEAM INNOVATION (5 Cols) -->
+      <div class="lg:col-span-5 rounded-3xl p-5 sm:p-6 formal-card flex flex-col justify-between space-y-4">
+        <div>
+          <div class="flex items-center justify-between pb-2 border-b border-blue-900/50">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+              <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider font-mono">Academic Cohort & Teamwork</h4>
+            </div>
+            <span class="text-[10px] font-mono text-indigo-300 bg-indigo-950/70 border border-indigo-800/60 px-2 py-0.5 rounded-full font-semibold">KPRIET &bull; 2029</span>
+          </div>
+
+          <!-- Cohort Image -->
+          <div class="mt-3 relative rounded-2xl overflow-hidden border border-blue-500/30 group cursor-pointer" onclick="openCohortModal()" title="Click to inspect collegiate cohort photograph">
+            <img src="./college_group_upright.jpg" alt="KPRIET Academic Cohort & Hackathon Delegation" class="w-full h-48 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-3">
+              <span class="text-xs font-bold text-white tracking-tight">KPR Institute Technology & Peer Delegation</span>
+              <p class="text-[10px] text-slate-300 mt-0.5 line-clamp-2 font-sans font-light">Collaborative participation in department hackathons, technical symposiums, and engineering workshops.</p>
+            </div>
+            <div class="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-mono text-[9px]">
+              Click to Zoom &nearr;
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3 rounded-xl bg-corporate-950/80 border border-blue-900/40 text-[11px] font-mono text-slate-300">
+          <div class="flex items-center justify-between">
+            <span class="text-slate-400">COLLABORATION:</span>
+            <span class="text-blue-300 font-semibold">Hackathons &amp; Peer Prototyping</span>
+          </div>
+          <div class="flex items-center justify-between mt-1">
+            <span class="text-slate-400">INSTITUTION:</span>
+            <span class="text-white font-semibold">KPR Institute of Engg &amp; Tech</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
 
     <!-- CORE COMPETENCY & TECHNICAL SKILLS MATRIX -->
     <div class="rounded-3xl p-6 sm:p-8 formal-card space-y-5">
@@ -2704,6 +2857,154 @@
       if (photo) photo.src = PHOTO_VARIANTS[currentPhotoIndex].src;
       if (label) label.innerText = PHOTO_VARIANTS[currentPhotoIndex].label;
       showToast('Photo Style: ' + PHOTO_VARIANTS[currentPhotoIndex].label);
+    }
+
+    
+    // Audio Bio Speech Synthesizer
+    let synth = window.speechSynthesis;
+    let isSpeaking = false;
+
+    function toggleAudioIntro() {
+      if (!synth) {
+        showToast('Speech synthesis not supported in this browser.');
+        return;
+      }
+
+      if (isSpeaking) {
+        synth.cancel();
+        isSpeaking = false;
+        updateAudioBtn(false);
+        return;
+      }
+
+      const bioText = "Hello and welcome! I am Karunesh P, an engineering student at KPR Institute of Engineering and Technology, aiming for a career in Software Engineering with a strong focus on Artificial Intelligence and Python. I have earned 70 verified industry certifications from AWS, IBM, MathWorks, and Microsoft, and secured Second Prize at the Karpagam College of Engineering National Hackathon. Thank you for visiting my official portfolio.";
+      
+      const utterance = new SpeechSynthesisUtterance(bioText);
+      utterance.rate = 1.0;
+      utterance.pitch = 1.0;
+
+      utterance.onstart = () => {
+        isSpeaking = true;
+        updateAudioBtn(true);
+        showToast('Playing 20-Sec Executive Audio Bio...');
+      };
+
+      utterance.onend = () => {
+        isSpeaking = false;
+        updateAudioBtn(false);
+      };
+
+      utterance.onerror = () => {
+        isSpeaking = false;
+        updateAudioBtn(false);
+      };
+
+      synth.speak(utterance);
+    }
+
+    function updateAudioBtn(speaking) {
+      const btn = document.getElementById('audioIntroBtn');
+      const text = document.getElementById('audioBtnText');
+      const iconPlay = document.getElementById('audioIconPlay');
+      const iconStop = document.getElementById('audioIconStop');
+      if (text) text.innerText = speaking ? 'Stop Audio' : 'Play Audio Bio';
+      if (iconPlay) iconPlay.classList.toggle('hidden', speaking);
+      if (iconStop) iconStop.classList.toggle('hidden', !speaking);
+    }
+
+    // Terminal Quick Commands
+    function runTerminalCmd(type) {
+      if (type === 'hackathon') {
+        showScreen('resume');
+        showToast('Karpagam National Hackathon: 2nd Prize Winner!');
+      } else if (type === 'certs') {
+        showScreen('dossier');
+        showToast('Loaded 70 Verified Accreditations!');
+      }
+    }
+
+    
+    // Background Interactive Constellation Animation
+    (function initConstellation() {
+      const canvas = document.getElementById('bgCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w, h;
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const dots = [];
+      const numDots = Math.min(45, Math.floor(window.innerWidth / 30));
+      for (let i = 0; i < numDots; i++) {
+        dots.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 1.5 + 1
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.fillStyle = '#60a5fa';
+        ctx.strokeStyle = 'rgba(59, 130, 246, 0.15)';
+
+        for (let i = 0; i < dots.length; i++) {
+          const d = dots[i];
+          d.x += d.vx;
+          d.y += d.vy;
+          if (d.x < 0 || d.x > w) d.vx *= -1;
+          if (d.y < 0 || d.y > h) d.vy *= -1;
+
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+          ctx.fill();
+
+          for (let j = i + 1; j < dots.length; j++) {
+            const d2 = dots[j];
+            const dist = Math.hypot(d.x - d2.x, d.y - d2.y);
+            if (dist < 120) {
+              ctx.lineWidth = 1 - dist / 120;
+              ctx.beginPath();
+              ctx.moveTo(d.x, d.y);
+              ctx.lineTo(d2.x, d2.y);
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+    // High-Res Image Modals
+    function openPhotoModal() {
+      openInspector('cert-22'); // Or show high res portrait
+    }
+
+    function openCohortModal() {
+      const modal = document.getElementById('inspectorModal');
+      const content = document.getElementById('inspectorContent');
+      content.innerHTML = `
+        <div class="p-6 space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-blue-900/60 font-mono text-xs">
+            <span class="text-blue-400 font-bold">KPR INSTITUTE OF ENGINEERING & TECHNOLOGY &bull; COHORT 2025-2029</span>
+            <button onclick="closeInspector()" class="px-3 py-1 rounded bg-blue-900/60 text-white font-mono text-xs">CLOSE &times;</button>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-blue-500/40">
+            <img src="./college_group_upright.jpg" class="w-full max-h-[70vh] object-contain bg-black">
+          </div>
+          <div class="text-sm font-sans text-slate-300">
+            <p><strong>Department &amp; Hackathon Delegation:</strong> Active collaboration at collegiate symposiums, peer programming hackathons, and hardware-software prototype design at KPR Institute of Engineering and Technology, Coimbatore.</p>
+          </div>
+        </div>
+      `;
+      modal.classList.remove('opacity-0', 'pointer-events-none');
     }
 
     function showToast(msg) {
