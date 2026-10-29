@@ -463,40 +463,41 @@
         <div>
           <div class="flex items-center justify-between pb-2 border-b border-blue-900/50">
             <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
-              <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider font-mono">Academic Cohort & Teamwork</h4>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider font-mono">National Hackathon Milestone</h4>
             </div>
-            <span class="text-[10px] font-mono text-indigo-300 bg-indigo-950/70 border border-indigo-800/60 px-2 py-0.5 rounded-full font-semibold">KPRIET &bull; 2029</span>
+            <span class="text-[10px] font-mono text-amber-300 bg-amber-950/70 border border-amber-800/60 px-2 py-0.5 rounded-full font-bold">2ND PRIZE WINNER</span>
           </div>
 
-          <!-- Cohort Image -->
-          <div class="mt-3 relative rounded-2xl overflow-hidden border border-blue-500/30 group cursor-pointer" onclick="openCohortModal()" title="Click to inspect collegiate cohort photograph">
-            <img src="./college_group_upright.jpg" alt="KPRIET Academic Cohort & Hackathon Delegation" class="w-full h-48 object-cover object-center transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-3">
-              <span class="text-xs font-bold text-white tracking-tight">KPR Institute Technology & Peer Delegation</span>
-              <p class="text-[10px] text-slate-300 mt-0.5 line-clamp-2 font-sans font-light">Collaborative participation in department hackathons, technical symposiums, and engineering workshops.</p>
+          <!-- Hackathon Image Showcase -->
+          <div class="mt-3 relative rounded-2xl overflow-hidden border border-amber-500/30 group cursor-pointer" onclick="openHackathonModal()" title="Click to inspect national hackathon award details">
+            <img src="./hackathon_win_celebration.jpg" alt="National Level Hackathon Second Prize Celebration" class="w-full h-48 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-3.5">
+              <span class="text-xs font-bold text-amber-200 tracking-tight flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Karpagam College of Engineering (KCE), Coimbatore
+              </span>
+              <p class="text-[10px] text-slate-300 mt-1 line-clamp-2 font-sans font-light">Awarded Second Prize at the National Level Hackathon for developing an intelligent software prototype with rapid algorithmic execution.</p>
             </div>
-            <div class="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-mono text-[9px]">
-              Click to Zoom &nearr;
+            <div class="absolute top-2 right-2 px-2.5 py-0.5 rounded-full bg-amber-950/80 backdrop-blur-md border border-amber-500/40 text-amber-300 font-mono text-[9px] font-bold">
+              View Honor &nearr;
             </div>
           </div>
         </div>
 
         <div class="p-3 rounded-xl bg-corporate-950/80 border border-blue-900/40 text-[11px] font-mono text-slate-300">
           <div class="flex items-center justify-between">
-            <span class="text-slate-400">COLLABORATION:</span>
-            <span class="text-blue-300 font-semibold">Hackathons &amp; Peer Prototyping</span>
+            <span class="text-slate-400">ORGANIZATION:</span>
+            <span class="text-white font-semibold">Karpagam College of Engg (KCE)</span>
           </div>
           <div class="flex items-center justify-between mt-1">
-            <span class="text-slate-400">INSTITUTION:</span>
-            <span class="text-white font-semibold">KPR Institute of Engg &amp; Tech</span>
+            <span class="text-slate-400">RECOGNITION:</span>
+            <span class="text-amber-300 font-semibold">National 2nd Prize &bull; Feb 2026</span>
           </div>
         </div>
       </div>
 
     </div>
-
-
     <!-- CORE COMPETENCY & TECHNICAL SKILLS MATRIX -->
     <div class="rounded-3xl p-6 sm:p-8 formal-card space-y-5">
       <div class="flex items-center gap-2 pb-2 border-b border-blue-900/40">
@@ -2987,20 +2988,29 @@
       openInspector('cert-22'); // Or show high res portrait
     }
 
-    function openCohortModal() {
+    function openHackathonModal() {
       const modal = document.getElementById('inspectorModal');
       const content = document.getElementById('inspectorContent');
       content.innerHTML = `
         <div class="p-6 space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-blue-900/60 font-mono text-xs">
-            <span class="text-blue-400 font-bold">KPR INSTITUTE OF ENGINEERING & TECHNOLOGY &bull; COHORT 2025-2029</span>
-            <button onclick="closeInspector()" class="px-3 py-1 rounded bg-blue-900/60 text-white font-mono text-xs">CLOSE &times;</button>
+          <div class="flex items-center justify-between pb-3 border-b border-amber-900/60 font-mono text-xs">
+            <span class="text-amber-400 font-bold flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              KARPAGAM COLLEGE OF ENGINEERING (KCE), COIMBATORE &bull; NATIONAL HACKATHON
+            </span>
+            <button onclick="closeInspector()" class="px-3 py-1 rounded bg-corporate-800 text-white font-mono text-xs">CLOSE &times;</button>
           </div>
-          <div class="rounded-2xl overflow-hidden border border-blue-500/40">
-            <img src="./college_group_upright.jpg" class="w-full max-h-[70vh] object-contain bg-black">
+          <div class="rounded-2xl overflow-hidden border border-amber-500/40 shadow-2xl">
+            <img src="./hackathon_win_celebration.jpg" class="w-full max-h-[65vh] object-cover bg-black">
           </div>
-          <div class="text-sm font-sans text-slate-300">
-            <p><strong>Department &amp; Hackathon Delegation:</strong> Active collaboration at collegiate symposiums, peer programming hackathons, and hardware-software prototype design at KPR Institute of Engineering and Technology, Coimbatore.</p>
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2 text-sm font-sans text-slate-300">
+            <div>
+              <h4 class="font-bold text-white text-base">National Level Hackathon &mdash; Second Prize Winner</h4>
+              <p class="text-xs text-slate-400 mt-0.5">Awarded for rapid prototyping, robust software architecture, and real-time AI implementation under competitive national conditions.</p>
+            </div>
+            <button onclick="openInspector('cert-22')" class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-mono text-xs font-bold transition-all shadow-md shrink-0">
+              Inspect Certificate #22 &rarr;
+            </button>
           </div>
         </div>
       `;
